@@ -1,0 +1,90 @@
+<resources>
+    <string name="app_name">Waktu Shalat</string>
+    <!--  Bottom nav  -->
+    <string name="nav_home">Beranda</string>
+    <string name="nav_schedule">Jadwal</string>
+    <string name="nav_qibla">Kiblat</string>
+    <string name="nav_settings">Pengaturan</string>
+    <!--  Nama shalat  -->
+    <string name="prayer_fajr">Subuh</string>
+    <string name="prayer_sunrise">Terbit</string>
+    <string name="prayer_dhuhr">Dzuhur</string>
+    <string name="prayer_asr">Ashar</string>
+    <string name="prayer_maghrib">Maghrib</string>
+    <string name="prayer_isha">Isya</string>
+    <!--  Izin awal  -->
+    <string name="onboarding_title">Biar adzan selalu tepat waktu</string>
+    <string name="onboarding_subtitle">Waktu Shalat butuh tiga izin. Semua jadwal dihitung di HP, tanpa akun dan tanpa internet.</string>
+    <string name="permission_location_title">Lokasi perkiraan</string>
+    <string name="permission_location_desc">Untuk menghitung jadwal di kotamu. Tidak perlu GPS presisi.</string>
+    <string name="permission_notification_title">Notifikasi</string>
+    <string name="permission_notification_desc">Untuk menampilkan adzan dan pengingat.</string>
+    <string name="permission_alarm_title">Alarm tepat waktu</string>
+    <string name="permission_alarm_desc">Android 14 ke atas. Tanpa ini adzan bisa telat beberapa menit.</string>
+    <string name="action_allow">Izinkan</string>
+    <string name="action_open">Buka</string>
+    <string name="status_allowed">Diizinkan</string>
+    <string name="action_start">Mulai</string>
+    <string name="action_pick_city_manual">Pilih kota manual tanpa izin lokasi</string>
+    <!--  Beranda  -->
+    <string name="cd_refresh_location">Perbarui lokasi</string>
+    <string name="label_next">Berikutnya</string>
+    <string name="label_today">Hari ini</string>
+    <string name="countdown_hours_minutes">%1$d jam %2$d menit lagi</string>
+    <string name="countdown_minutes">%1$d menit lagi</string>
+    <string name="progress_start">%1$s %2$s</string>
+    <string name="method_summary">Kemenag · Subuh %1$d° · Isya %2$d°</string>
+    <string name="warning_exact_alarm_title">Adzan bisa telat</string>
+    <string name="warning_exact_alarm_desc">Izin alarm tepat waktu belum diberikan.</string>
+    <string name="cd_adhan_on">Adzan %1$s aktif</string>
+    <string name="cd_adhan_off">Tanpa adzan saat %1$s</string>
+    <!--  Jadwal bulanan  -->
+    <string name="cd_prev_month">Bulan sebelumnya</string>
+    <string name="cd_next_month">Bulan berikutnya</string>
+    <string name="action_change">Ubah</string>
+    <string name="schedule_header_date">Tgl</string>
+    <string name="schedule_footnote">Imsak = Subuh − 10 menit</string>
+    <!--  Kiblat  -->
+    <string name="qibla_title">Arah kiblat</string>
+    <string name="qibla_distance">%1$s · %2$s km ke Ka\'bah</string>
+    <string name="qibla_degree_caption">dari utara, searah jarum jam</string>
+    <string name="qibla_turn_right">Putar HP %1$d° ke kanan</string>
+    <string name="qibla_turn_left">Putar HP %1$d° ke kiri</string>
+    <string name="qibla_facing">Sudah menghadap kiblat</string>
+    <string name="qibla_legend">Segitiga di atas = arah HP · Kotak hitam = Ka\'bah</string>
+    <string name="qibla_low_accuracy">Akurasi kompas rendah. Gerakkan HP membentuk angka 8, jauhkan dari magnet dan logam.</string>
+    <string name="compass_north">U</string>
+    <string name="compass_east">T</string>
+    <string name="compass_south">S</string>
+    <string name="compass_west">B</string>
+    <!--  Pengaturan  -->
+    <string name="settings_title">Pengaturan</string>
+    <string name="settings_section_location">Lokasi</string>
+    <string name="settings_auto_location">Lokasi otomatis</string>
+    <string name="settings_auto_location_desc">Diperbarui setiap app dibuka</string>
+    <string name="settings_city">Kota</string>
+    <string name="settings_section_calc">Perhitungan</string>
+    <string name="settings_method">Metode</string>
+    <string name="settings_madhab">Madzhab Ashar</string>
+    <string name="settings_adjustment">Koreksi waktu</string>
+    <string name="settings_adjustment_desc">Bisa diatur per waktu shalat</string>
+    <string name="settings_section_adhan">Adzan &amp; pengingat</string>
+    <string name="settings_reminder">Pengingat sebelum adzan</string>
+    <string name="settings_section_reliability">Keandalan adzan</string>
+    <string name="settings_exact_alarm">Alarm tepat waktu</string>
+    <string name="settings_exact_alarm_desc">Wajib di Android 14+ agar adzan tidak telat</string>
+    <string name="settings_battery">Optimasi baterai</string>
+    <string name="settings_battery_desc">Adzan bisa telat di sebagian HP</string>
+    <string name="settings_oem_guide">Panduan Xiaomi, Oppo, Vivo</string>
+    <string name="settings_version">Waktu Shalat %1$s · Perhitungan: adhan-kotlin</string>
+    <!--  Widget  -->
+    <string name="widget_label_next">Berikutnya · %1$s</string>
+    <string name="widget_description">Waktu shalat berikutnya dan jadwal hari ini</string>
+    <!--  Notifikasi  -->
+    <string name="channel_adhan_name">Adzan</string>
+    <string name="channel_reminder_name">Pengingat</string>
+    <string name="notif_adhan_title">%1$s · %2$s</string>
+    <string name="notif_adhan_text">Saatnya shalat %1$s di %2$s</string>
+    <string name="notif_reminder_title">%1$d menit lagi %2$s</string>
+    <string name="action_stop_adhan">Hentikan adzan</string>
+</resources>
