@@ -1,9 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 
 <androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".MainActivity"
+    android:theme="@style/Theme.WaktuShalat"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:background="?android:attr/colorBackground"
     android:fillViewport="true">
 
@@ -14,15 +17,13 @@
         android:paddingHorizontal="20dp"
         android:paddingTop="56dp"
         android:paddingBottom="24dp">
-        
+
         <TextView
-            android:id="@+id/onboardingTitle"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:textAppearance="?attr/textAppearanceHeadlineMedium"
-            android:textSize="24dp"
             android:text="@string/onboarding_title"
-            />
+            android:textAppearance="?attr/textAppearanceHeadlineMedium"
+            android:textSize="24sp" />
 
         <TextView
             android:layout_width="match_parent"
@@ -31,16 +32,15 @@
             android:lineSpacingMultiplier="1.15"
             android:text="@string/onboarding_subtitle"
             android:textAppearance="?attr/textAppearanceBodyLarge"
-            android:textColor="?attr/colorOnSurfaceVariant"/>
+            android:textColor="?attr/colorOnSurfaceVariant" />
 
-    <!--   card:location     -->
-
+        <!-- Kartu: lokasi -->
         <LinearLayout
             android:id="@+id/cardPermissionLocation"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="22dp"
-            android:background=""
+            android:background="@drawable/bg_card"
             android:gravity="center_vertical"
             android:orientation="horizontal"
             android:paddingVertical="14dp"
@@ -50,10 +50,12 @@
             <ImageView
                 android:layout_width="40dp"
                 android:layout_height="40dp"
+                android:background="@drawable/bg_icon_circle"
                 android:importantForAccessibility="no"
                 android:padding="10dp"
-                app:tint="?attr/colorPrimary"/>
-            
+                android:src="@drawable/ic_location"
+                app:tint="?attr/colorPrimary" />
+
             <LinearLayout
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
@@ -65,17 +67,191 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="@string/permission_location_title"
-                    android:textAppearance="?attr/textAppearanceTitleMedium"/>
+                    android:textAppearance="?attr/textAppearanceTitleMedium" />
 
-
-
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="2dp"
+                    android:text="@string/permission_location_desc"
+                    android:textAppearance="?attr/textAppearanceBodyMedium" />
             </LinearLayout>
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnAllowLocation"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/action_allow" />
+
+            <TextView
+                android:id="@+id/tvLocationGranted"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:drawablePadding="4dp"
+                android:gravity="center_vertical"
+                android:text="@string/status_allowed"
+                android:textColor="?attr/colorPrimary"
+                android:textSize="13sp"
+                android:textStyle="bold"
+                android:visibility="gone"
+                app:drawableStartCompat="@drawable/ic_check"
+                app:drawableTint="?attr/colorPrimary" />
+        </LinearLayout>
+
+        <!--   card notification     -->
+
+        <LinearLayout
+            android:id="@+id/cardPermissionNotification"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/bg_card"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:paddingVertical="14dp"
+            android:paddingStart="16dp"
+            android:paddingEnd="14dp">
+
+            <ImageView
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:src="@drawable/ic_bell"
+                android:background="@drawable/bg_icon_circle"
+                android:padding="10dp"
+                android:importantForAccessibility="no"
+                android:tint="?attr/colorPrimary" />
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="14dp"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/permission_notification_title"
+                    android:textAppearance="?attr/textAppearanceTitleMedium" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="2dp"
+                    android:text="@string/permission_notification_desc"
+                    android:textAppearance="?attr/textAppearanceBodyMedium" />
+            </LinearLayout>
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnAllowNotification"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/action_allow" />
+
+            <TextView
+                android:id="@+id/tvNotificationGranted"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/status_allowed"
+                android:drawablePadding="4dp"
+                android:gravity="center_vertical"
+                android:textColor="?attr/colorPrimary"
+                android:textSize="13sp"
+                android:textStyle="bold"
+                android:visibility="gone"
+                app:drawableStartCompat="@drawable/ic_check"
+                android:drawableTint="?attr/colorPrimary" />
 
         </LinearLayout>
 
+        <!--   card  alarm     -->
 
+        <LinearLayout
+            android:id="@+id/cardPermissionAlarm"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/bg_card"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:paddingVertical="14dp"
+            android:paddingStart="16dp"
+            android:paddingEnd="14dp">
+
+            <ImageView
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:background="@drawable/bg_icon_circle"
+                android:src="@drawable/ic_alarm"
+                android:padding="10dp"
+                android:importantForAccessibility="no"
+                android:tint="?attr/colorPrimary" />
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="14dp"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/permission_alarm_title"
+                    android:textAppearance="?attr/textAppearanceTitleMedium" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="2dp"
+                    android:text="@string/permission_alarm_desc"
+                    android:textAppearance="?attr/textAppearanceBodyMedium" />
+            </LinearLayout>
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnOpenAlarmSettings"
+                style="@style/Widget.WaktuShalat.Button.Outlined"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/action_open" />
+
+            <TextView
+                android:id="@+id/tvAlarmGranted"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:drawablePadding="4dp"
+                android:gravity="center_vertical"
+                android:text="@string/status_allowed"
+                android:textColor="?attr/colorPrimary"
+                android:textSize="13sp"
+                android:textStyle="bold"
+                android:visibility="gone"
+                app:drawableStartCompat="@drawable/ic_check"
+                app:drawableTint="?attr/colorPrimary" />
+
+
+        </LinearLayout>
+
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnStart"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/action_start"
+            style="@style/Widget.WaktuShalat.Button.Dark" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnPickCityManual"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/action_pick_city_manual"
+            style="@style/Widget.WaktuShalat.Button.Text"
+            tools:ignore="TextContrastCheck" />
 
     </LinearLayout>
-
-
 </androidx.core.widget.NestedScrollView>

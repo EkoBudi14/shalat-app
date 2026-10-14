@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Baris shalat berikutnya di beranda: adapter set itemView.isActivated = true -->
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:color="@color/green_700" android:state_activated="true" />
+    <item android:color="@color/ink" />
+</selector>

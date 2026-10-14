@@ -1,13 +1,15 @@
-<?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <!--  Palet dari desain (halaman "Warna & tipografi")  -->
     <color name="green_700">#0E5E4F</color>
     <color name="green_100">#E3EFEB</color>
     <color name="green_on_dark">#CFE6DF</color>
     <color name="green_track">#2C7A6A</color>
+    <color name="green_countdown">#E6F2EE</color>
     <color name="amber_600">#B4691F</color>
     <color name="amber_100">#F7EBDD</color>
     <color name="amber_900">#5E3509</color>
     <color name="amber_800">#8A4E12</color>
+    <color name="amber_850">#6E4313</color>
     <color name="warm_accent">#F2C38B</color>
     <color name="ink">#13201B</color>
     <color name="ink_secondary">#5B6B64</color>

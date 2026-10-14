@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Piringan kompas 300x300. Garis kecil tiap 10°, garis tebal di U/T/S/B. Seluruh piringan diputar dari kode. -->
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="300dp"
+    android:height="300dp"
+    android:viewportWidth="300"
+    android:viewportHeight="300">
+    <path
+        android:fillColor="#FFFFFFFF"
+        android:strokeColor="#FFDCE3DF"
+        android:strokeWidth="2"
+        android:pathData="M290,150a140,140 0 1,1 -280,0a140,140 0 1,1 280,0z" />
+    <path
+        android:strokeColor="#FFB9C5C0"
+        android:strokeWidth="2"
+        android:strokeLineCap="round"
+        android:pathData="M171.5,27.9L173.3,18.0M192.4,33.5L195.8,24.1M212.0,42.6L217.0,34.0M229.7,55.0L236.1,47.4M245.0,70.3L252.6,63.9M257.4,88.0L266.0,83.0M266.5,107.6L275.9,104.2M272.1,128.5L282.0,126.7M272.1,171.5L282.0,173.3M266.5,192.4L275.9,195.8M257.4,212.0L266.0,217.0M245.0,229.7L252.6,236.1M229.7,245.0L236.1,252.6M212.0,257.4L217.0,266.0M192.4,266.5L195.8,275.9M171.5,272.1L173.3,282.0M128.5,272.1L126.7,282.0M107.6,266.5L104.2,275.9M88.0,257.4L83.0,266.0M70.3,245.0L63.9,252.6M55.0,229.7L47.4,236.1M42.6,212.0L34.0,217.0M33.5,192.4L24.1,195.8M27.9,171.5L18.0,173.3M27.9,128.5L18.0,126.7M33.5,107.6L24.1,104.2M42.6,88.0L34.0,83.0M55.0,70.3L47.4,63.9M70.3,55.0L63.9,47.4M88.0,42.6L83.0,34.0M107.6,33.5L104.2,24.1M128.5,27.9L126.7,18.0" />
+    <path
+        android:strokeColor="#FF13201B"
+        android:strokeWidth="3"
+        android:strokeLineCap="round"
+        android:pathData="M150.0,34.0L150.0,14.0M266.0,150.0L286.0,150.0M150.0,266.0L150.0,286.0M34.0,150.0L14.0,150.0" />
+</vector>

@@ -1,9 +1,49 @@
-<resources xmlns:tools="http://schemas.android.com/tools">
-    <!-- Base application theme. -->
-    <style name="Base.Theme.MyApplication" parent="Theme.Material3.DayNight.NoActionBar">
-        <!-- Customize your light theme here. -->
-        <!-- <item name="colorPrimary">@color/my_light_primary</item> -->
+<resources>
+    <!--  Tema utama. Nama ini dipakai di AndroidManifest: android:theme="@style/Theme.WaktuShalat"  -->
+    <style name="Theme.WaktuShalat" parent="Theme.Material3.Light.NoActionBar">
+        <item name="colorPrimary">@color/green_700</item>
+        <item name="colorOnPrimary">@color/white</item>
+        <item name="colorPrimaryContainer">@color/green_100</item>
+        <item name="colorOnPrimaryContainer">@color/green_700</item>
+        <item name="colorTertiary">@color/amber_600</item>
+        <item name="colorOnTertiary">@color/white</item>
+        <item name="colorTertiaryContainer">@color/amber_100</item>
+        <item name="colorOnTertiaryContainer">@color/amber_900</item>
+        <!--  Secondary diisi hijau juga. Kalau dikosongkan, Material 3 pakai warna bawaan ungu  -->
+        <item name="colorSecondary">@color/green_700</item>
+        <item name="colorOnSecondary">@color/white</item>
+        <item name="colorSecondaryContainer">@color/green_100</item>
+        <item name="colorOnSecondaryContainer">@color/green_700</item>
+        <item name="android:colorBackground">@color/ground</item>
+        <item name="colorOnBackground">@color/ink</item>
+        <item name="colorSurface">@color/white</item>
+        <item name="colorOnSurface">@color/ink</item>
+        <item name="colorSurfaceVariant">@color/divider</item>
+        <item name="colorOnSurfaceVariant">@color/ink_secondary</item>
+        <item name="colorOutline">@color/outline</item>
+        <item name="colorOutlineVariant">@color/divider</item>
+        <item name="colorSurfaceInverse">@color/ink</item>
+        <item name="colorOnSurfaceInverse">@color/white</item>
+        <!--  Latar dialog, menu, bottom sheet. Kalau dikosongkan, Material 3 pakai abu-abu keunguan  -->
+        <item name="colorSurfaceContainerLowest">@color/white</item>
+        <item name="colorSurfaceContainerLow">@color/white</item>
+        <item name="colorSurfaceContainer">@color/white</item>
+        <item name="colorSurfaceContainerHigh">@color/ground</item>
+        <item name="colorSurfaceContainerHighest">@color/divider</item>
+        <item name="materialSwitchStyle">@style/Widget.WaktuShalat.Switch</item>
+        <item name="android:fontFamily">@font/plus_jakarta_sans</item>
+        <item name="fontFamily">@font/plus_jakarta_sans</item>
+        <item name="textAppearanceDisplayMedium">@style/TextAppearance.WaktuShalat.DisplayMedium
+        </item>
+        <item name="textAppearanceHeadlineMedium">@style/TextAppearance.WaktuShalat.HeadlineMedium
+        </item>
+        <item name="textAppearanceTitleLarge">@style/TextAppearance.WaktuShalat.TitleLarge</item>
+        <item name="textAppearanceTitleMedium">@style/TextAppearance.WaktuShalat.TitleMedium</item>
+        <item name="textAppearanceBodyLarge">@style/TextAppearance.WaktuShalat.BodyLarge</item>
+        <item name="textAppearanceBodyMedium">@style/TextAppearance.WaktuShalat.BodyMedium</item>
+        <item name="textAppearanceLabelMedium">@style/TextAppearance.WaktuShalat.LabelMedium</item>
+        <item name="materialButtonStyle">@style/Widget.WaktuShalat.Button</item>
+        <item name="bottomNavigationStyle">@style/Widget.WaktuShalat.BottomNav</item>
+        <!--  Status bar & navigation bar transparan diatur dari kode: enableEdgeToEdge() di MainActivity  -->
     </style>
-
-    <style name="Theme.MyApplication" parent="Base.Theme.MyApplication" />
 </resources>

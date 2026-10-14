@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Lingkaran 40dp di belakang ikon kartu izin -->
+<shape xmlns:android="http://schemas.android.com/apk/res/android" android:shape="oval">
+    <solid android:color="@color/green_100" />
+    <size android:width="40dp" android:height="40dp" />
+</shape>
