@@ -179,9 +179,104 @@
 
         </LinearLayout>
 
+        <!--   Today     -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:baselineAligned="true"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/label_today"
+                android:textAppearance="?attr/textAppearanceTitleMedium" />
+
+            <TextView
+                android:id="@+id/tvMethod"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="?attr/colorOnSurface"
+                android:textSize="12sp"
+                android:text="Kemenag · Subuh 20° · Isya 18°" />
 
 
+        </LinearLayout>
 
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:background="@drawable/bg_card"
+            android:paddingVertical="4dp">
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rvPrayerTimes"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:nestedScrollingEnabled="false"
+                android:overScrollMode="never"
+                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                tools:itemCount="6"
+                tools:listitem="@layout/item_prayer_time" />
+
+        </FrameLayout>
+
+        <LinearLayout
+            android:id="@+id/layoutExactAlarmWarning"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:background="@drawable/bg_warning"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:paddingVertical="4dp"
+            android:paddingStart="14dp"
+            android:paddingEnd="4dp"
+            tools:visibility="visible">
+
+            <ImageView
+                android:layout_width="22dp"
+                android:layout_height="22dp"
+                android:importantForAccessibility="no"
+                android:src="@drawable/ic_alarm"
+                app:tint="@color/amber_800" />
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="12dp"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:paddingVertical="8dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/warning_exact_alarm_title"
+                    android:textColor="@color/amber_900"
+                    android:textSize="14sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="2dp"
+                    android:text="@string/warning_exact_alarm_desc"
+                    android:textColor="@color/amber_850"
+                    android:textSize="12.5sp" />
+            </LinearLayout>
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnAllowExactAlarm"
+                style="@style/Widget.WaktuShalat.Button.Text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/action_allow"
+                android:textColor="@color/amber_900" />
+        </LinearLayout>
     </LinearLayout>
 
 

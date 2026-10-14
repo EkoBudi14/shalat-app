@@ -1,0 +1,49 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/selector_schedule_row"
+    android:gravity="center_vertical"
+    android:minHeight="38dp"
+    android:orientation="horizontal"
+    android:paddingHorizontal="10dp">
+
+    <TextView
+        android:id="@+id/tvDay"
+        style="@style/WaktuShalat.ScheduleCell"
+        android:layout_width="40dp"
+        android:layout_weight="0"
+        android:gravity="start"
+        tools:text="9" />
+
+    <TextView
+        android:id="@+id/tvFajr"
+        style="@style/WaktuShalat.ScheduleCell"
+        tools:text="04:19" />
+
+    <TextView
+        android:id="@+id/tvSunrise"
+        style="@style/WaktuShalat.ScheduleCell"
+        android:textColor="@color/selector_schedule_text_muted"
+        tools:text="05:33" />
+
+    <TextView
+        android:id="@+id/tvDhuhr"
+        style="@style/WaktuShalat.ScheduleCell"
+        tools:text="11:42" />
+
+    <TextView
+        android:id="@+id/tvAsr"
+        style="@style/WaktuShalat.ScheduleCell"
+        tools:text="14:44" />
+
+    <TextView
+        android:id="@+id/tvMaghrib"
+        style="@style/WaktuShalat.ScheduleCell"
+        tools:text="17:48" />
+
+    <TextView
+        android:id="@+id/tvIsha"
+        style="@style/WaktuShalat.ScheduleCell"
+        tools:text="18:58" />
+</LinearLayout>
