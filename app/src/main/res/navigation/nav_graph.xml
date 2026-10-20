@@ -1,9 +1,66 @@
 <?xml version="1.0" encoding="utf-8"?>
 <navigation xmlns:android="http://schemas.android.com/apk/res/android"
-    android:id="@+id/nav_grap">
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/onBoardingFragment">
 
-    <fragment>
+    <fragment
+        android:id="@+id/onBoardingFragment"
+        android:name="com.example.myapplication.presentation.onboarding.OnboardingFragment"
+        android:label="Onboarding"
+        tools:layout="@layout/fragment_onboarding">
+        <action
+            android:id="@+id/action_onBoarding_to_home"
+            app:destination="@+id/homeFragment"
+            app:popUpTo="@id/nav_graph"
+            app:popUpToInclusive="true" />
+        <action
+            android:id="@+id/action_onBoarding_to_cityPicker"
+            app:destination="@id/cityPickerFragment" />
+    </fragment>
+
+
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="com.example.myapplication.presentation.homePage.HomePageFragment"
+        android:label="Home"
+        tools:layout="@layout/fragment_home">
+
+        <action
+            android:id="@+id/action_home_to_onBoarding"
+            app:destination="@+id/onBoardingFragment"
+            app:popUpTo="@+id/nav_graph"
+            app:popUpToInclusive="true" />
 
     </fragment>
 
+    <fragment
+        android:id="@+id/scheduleFragment"
+        android:name="com.example.myapplication.presentation.schedulePage.SchedulePageFragment"
+        android:label="Schedule"
+        tools:layout="@layout/fragment_schedule" />
+
+    <fragment
+        android:id="@+id/qiblaFragment"
+        android:name="com.example.myapplication.presentation.qiblahPage.QiblahPageFragment"
+        android:label="Qibla"
+        tools:layout="@layout/fragment_qibla" />
+
+    <fragment
+        android:id="@+id/settingsFragment"
+        android:name="com.example.myapplication.presentation.settingPage.SettingPageFragment"
+        android:label="Settings"
+        tools:layout="@layout/fragment_setting">
+
+        <action
+            android:id="@+id/action_settings_to_cityPicker"
+            app:destination="@id/cityPickerFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/cityPickerFragment"
+        android:name="com.example.myapplication.presentation.cityPickerPage.CityPickerFragment"
+        android:label="@string/settings_city"
+        tools:layout="@layout/fragment_city_picker" />
 </navigation>

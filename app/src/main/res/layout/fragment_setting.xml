@@ -1,6 +1,443 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-             android:layout_width="match_parent"
-             android:layout_height="match_parent">
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="?android:attr/colorBackground">
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingHorizontal="16dp"
+        android:paddingTop="24dp"
+        android:paddingBottom="24dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/settings_title"
+            android:layout_marginStart="4dp"
+            android:textAppearance="?attr/textAppearanceTitleLarge"
+            android:textSize="22sp" />
+
+        <!--   lokasi     -->
+        <TextView
+            style="@style/WaktuShalat.SectionLabel"
+            android:layout_marginTop="20dp"
+            android:text="@string/settings_section_location" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/bg_card"
+            android:orientation="vertical"
+            android:paddingVertical="1dp">
+
+            <LinearLayout
+                android:id="@+id/rowAutoLocation"
+                style="@style/WaktuShalat.SettingRow">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:text="@string/settings_auto_location"
+                        style="@style/WaktuShalat.SettingTitle" />
+
+                    <TextView
+                        style="@style/WaktuShalat.SettingSummary"
+                        android:text="@string/settings_auto_location" />
+                </LinearLayout>
+
+                <com.google.android.material.materialswitch.MaterialSwitch
+                    android:id="@+id/switchAutoLocation"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:contentDescription="setting_auto_location"
+                    tools:checked="true" />
+            </LinearLayout>
+
+            <View style="@style/WaktuShalat.SettingDivider" />
+
+            <LinearLayout
+                android:id="@+id/rowCity"
+                style="@style/WaktuShalat.SettingRow">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:text="@string/settings_city"
+                        style="@style/WaktuShalat.SettingTitle" />
+
+                    <TextView
+                        android:id="@+id/tvCitySummary"
+                        style="@style/WaktuShalat.SettingSummary"
+                        tools:text="-6.1754, 106.8272" />
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/tvCityValue"
+                    style="@style/WaktuShalat.SettingValue"
+                    android:text="Jakarta Pusat" />
+
+            </LinearLayout>
+        </LinearLayout>
+
+        <!-- ===== Perhitungan ===== -->
+        <TextView
+            style="@style/WaktuShalat.SectionLabel"
+            android:layout_marginTop="20dp"
+            android:text="@string/settings_section_calc" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/bg_card"
+            android:orientation="vertical"
+            android:paddingVertical="1dp">
+
+            <LinearLayout
+                android:id="@+id/rowMethod"
+                style="@style/WaktuShalat.SettingRow">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <TextView
+                        style="@style/WaktuShalat.SettingTitle"
+                        android:text="@string/settings_method" />
+
+                    <TextView
+                        android:id="@+id/tvMethodSummary"
+                        style="@style/WaktuShalat.SettingSummary"
+                        tools:text="Subuh 20° · Isya 18°" />
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/tvMethodValue"
+                    style="@style/WaktuShalat.SettingValue"
+                    tools:text="Kemenag RI" />
+            </LinearLayout>
+
+            <View style="@style/WaktuShalat.SettingDivider" />
+
+            <LinearLayout
+                android:id="@+id/rowMadhab"
+                style="@style/WaktuShalat.SettingRow">
+
+                <TextView
+                    style="@style/WaktuShalat.SettingTitle"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:text="@string/settings_madhab" />
+
+                <TextView
+                    android:id="@+id/tvMadhabValue"
+                    style="@style/WaktuShalat.SettingValue"
+                    tools:text="Syafi'i" />
+            </LinearLayout>
+
+            <View style="@style/WaktuShalat.SettingDivider" />
+
+            <LinearLayout
+                android:id="@+id/rowAdjustment"
+                style="@style/WaktuShalat.SettingRow">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <TextView
+                        style="@style/WaktuShalat.SettingTitle"
+                        android:text="@string/settings_adjustment" />
+
+                    <TextView
+                        style="@style/WaktuShalat.SettingSummary"
+                        android:text="@string/settings_adjustment_desc" />
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/tvAdjustmentValue"
+                    style="@style/WaktuShalat.SettingValue"
+                    tools:text="+2 menit" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <!-- ===== Adzan & pengingat ===== -->
+        <TextView
+            style="@style/WaktuShalat.SectionLabel"
+            android:layout_marginTop="20dp"
+            android:text="@string/settings_section_adhan" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/bg_card"
+            android:orientation="vertical"
+            android:paddingVertical="1dp">
+
+            <LinearLayout style="@style/WaktuShalat.SettingRow">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <TextView
+                        style="@style/WaktuShalat.SettingTitle"
+                        android:text="@string/prayer_fajr" />
+
+                    <TextView
+                        android:id="@+id/tvAdhanFajrSummary"
+                        style="@style/WaktuShalat.SettingSummary"
+                        tools:text="Adzan Subuh penuh" />
+                </LinearLayout>
+
+                <com.google.android.material.materialswitch.MaterialSwitch
+                    android:id="@+id/switchAdhanFajr"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:contentDescription="@string/prayer_fajr" />
+            </LinearLayout>
+
+            <View style="@style/WaktuShalat.SettingDivider" />
+
+            <LinearLayout style="@style/WaktuShalat.SettingRow">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <TextView
+                        style="@style/WaktuShalat.SettingTitle"
+                        android:text="@string/prayer_dhuhr" />
+
+                    <TextView
+                        android:id="@+id/tvAdhanDhuhrSummary"
+                        style="@style/WaktuShalat.SettingSummary"
+                        tools:text="Adzan penuh" />
+                </LinearLayout>
+
+                <com.google.android.material.materialswitch.MaterialSwitch
+                    android:id="@+id/switchAdhanDhuhr"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:contentDescription="@string/prayer_dhuhr" />
+            </LinearLayout>
+
+            <View style="@style/WaktuShalat.SettingDivider" />
+
+            <LinearLayout style="@style/WaktuShalat.SettingRow">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <TextView
+                        style="@style/WaktuShalat.SettingTitle"
+                        android:text="@string/prayer_asr" />
+
+                    <TextView
+                        android:id="@+id/tvAdhanAsrSummary"
+                        style="@style/WaktuShalat.SettingSummary"
+                        tools:text="Adzan penuh" />
+                </LinearLayout>
+
+                <com.google.android.material.materialswitch.MaterialSwitch
+                    android:id="@+id/switchAdhanAsr"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:contentDescription="@string/prayer_asr" />
+            </LinearLayout>
+
+            <View style="@style/WaktuShalat.SettingDivider" />
+
+            <LinearLayout style="@style/WaktuShalat.SettingRow">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <TextView
+                        style="@style/WaktuShalat.SettingTitle"
+                        android:text="@string/prayer_maghrib" />
+
+                    <TextView
+                        android:id="@+id/tvAdhanMaghribSummary"
+                        style="@style/WaktuShalat.SettingSummary"
+                        tools:text="Adzan penuh" />
+                </LinearLayout>
+
+                <com.google.android.material.materialswitch.MaterialSwitch
+                    android:id="@+id/switchAdhanMaghrib"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:contentDescription="@string/prayer_maghrib" />
+            </LinearLayout>
+
+            <View style="@style/WaktuShalat.SettingDivider" />
+
+            <LinearLayout style="@style/WaktuShalat.SettingRow">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <TextView
+                        style="@style/WaktuShalat.SettingTitle"
+                        android:text="@string/prayer_isha" />
+
+                    <TextView
+                        android:id="@+id/tvAdhanIshaSummary"
+                        style="@style/WaktuShalat.SettingSummary"
+                        tools:text="Bunyi notifikasi biasa" />
+                </LinearLayout>
+
+                <com.google.android.material.materialswitch.MaterialSwitch
+                    android:id="@+id/switchAdhanIsha"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:contentDescription="@string/prayer_isha" />
+            </LinearLayout>
+
+            <View style="@style/WaktuShalat.SettingDivider" />
+
+            <LinearLayout
+                android:id="@+id/rowReminder"
+                style="@style/WaktuShalat.SettingRow">
+
+                <TextView
+                    style="@style/WaktuShalat.SettingTitle"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:text="@string/settings_reminder" />
+
+                <TextView
+                    android:id="@+id/tvReminderValue"
+                    style="@style/WaktuShalat.SettingValue"
+                    tools:text="10 menit" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <!-- ===== Keandalan adzan ===== -->
+
+        <TextView
+            android:text="@string/settings_section_reliability"
+            android:layout_marginTop="20dp"
+            style="@style/WaktuShalat.SectionLabel" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/bg_card"
+            android:orientation="vertical"
+            android:paddingVertical="1dp">
+
+            <!-- Kalau belum diizinkan -->
+
+            <LinearLayout
+                android:id="@+id/rowExactAlarm"
+                style="@style/WaktuShalat.SettingRow">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <TextView
+                        style="@style/WaktuShalat.SettingTitle"
+                        android:text="@string/settings_exact_alarm" />
+
+                    <TextView
+                        style="@style/WaktuShalat.SettingSummary"
+                        android:text="@string/settings_exact_alarm_desc" />
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/tvExactAlarmValue"
+                    style="@style/WaktuShalat.SettingValue"
+                    tools:text="Belum"
+                    tools:textColor="@color/amber_800" />
+            </LinearLayout>
+
+            <View style="@style/WaktuShalat.SettingDivider" />
+
+            <LinearLayout
+                android:id="@+id/rowBattery"
+                style="@style/WaktuShalat.SettingRow">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <TextView
+                        style="@style/WaktuShalat.SettingTitle"
+                        android:text="@string/settings_battery" />
+
+                    <TextView
+                        style="@style/WaktuShalat.SettingSummary"
+                        android:text="@string/settings_battery_desc" />
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/tvBatteryValue"
+                    style="@style/WaktuShalat.SettingValue"
+                    tools:text="Aktif"
+                    tools:textColor="@color/amber_800" />
+            </LinearLayout>
+
+            <View style="@style/WaktuShalat.SettingDivider" />
+
+            <LinearLayout
+                android:id="@+id/rowOemGuide"
+                style="@style/WaktuShalat.SettingRow">
+
+                <TextView
+                    style="@style/WaktuShalat.SettingTitle"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:text="@string/settings_oem_guide" />
+
+                <TextView
+                    style="@style/WaktuShalat.SettingValue"
+                    android:importantForAccessibility="no" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/tvVersion"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:gravity="center"
+            android:textColor="?attr/colorOnSurfaceVariant"
+            android:textSize="12sp"
+            tools:text="Waktu Shalat 1.0.0 · Perhitungan: adhan-kotlin" />
+    </LinearLayout>
+
+</androidx.core.widget.NestedScrollView>

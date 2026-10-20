@@ -132,8 +132,7 @@
             android:layout_width="match_parent"
             android:layout_height="1dp"
             android:background="?attr/colorOutline" />
-        <!--  Satu baris per tanggal. Scroll ke hari ini: layoutManager.scrollToPositionWithOffset(todayIndex, 0)
-                     Garis antar baris (#EEF2F0): addItemDecoration(MaterialDividerItemDecoration(context, LinearLayoutManager.VERTICAL))  -->
+
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/rvSchedule"
             android:layout_width="match_parent"

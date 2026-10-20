@@ -1,6 +1,199 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-             android:layout_width="match_parent"
-             android:layout_height="match_parent">
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="?android:colorBackground"
+    android:fillViewport="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        tools:ignore="MissingConstraints"
+        android:gravity="center_horizontal"
+        android:orientation="vertical"
+        android:paddingHorizontal="20dp"
+        android:paddingTop="24dp"
+        android:paddingBottom="16dp">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/qibla_title"
+            android:textAppearance="?attr/textAppearanceTitleLarge" />
+
+        <TextView
+            android:id="@+id/tvQiblaDistance"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:textAppearance="?attr/textAppearanceBodyMedium"
+            android:text="Jakarta Pusat · 7.917 km ke Ka'bah" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="18dp"
+            android:fontFeatureSettings="tnum"
+            android:includeFontPadding="false"
+            android:textAppearance="?attr/textAppearanceDisplayMedium"
+            android:textSize="56dp"
+            android:textColor="?attr/colorPrimary"
+            tools:text="295°" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="2dp"
+            android:text="@string/qibla_degree_caption"
+            android:textAppearance="?attr/textAppearanceBodyMedium" />
+
+        <!--   Kompas     -->
+        <FrameLayout
+            android:layout_width="300dp"
+            android:layout_height="312dp"
+            android:layout_marginTop="18dp">
+
+            <FrameLayout
+                android:id="@+id/diaLayer"
+                android:layout_width="300dp"
+                android:layout_height="300dp"
+                android:layout_gravity="bottom|center_horizontal">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:importantForAccessibility="no"
+                    android:src="@drawable/bg_compass_dial" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="top|center_horizontal"
+                    android:layout_marginTop="44dp"
+                    android:text="@string/compass_north"
+                    android:textAppearance="?attr/colorTertiary"
+                    android:textSize="16dp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="end|center_vertical"
+                    android:layout_marginEnd="48dp"
+                    android:textSize="16dp"
+                    android:textStyle="bold"
+                    android:textAppearance="?attr/colorOnSurfaceVariant"
+                    android:text="@string/compass_east" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/compass_south"
+                    android:layout_gravity="bottom|center_horizontal"
+                    android:layout_marginBottom="44dp"
+                    android:textSize="16dp"
+                    android:textAppearance="?attr/colorOnSurfaceVariant"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/compass_west"
+                    android:layout_gravity="start|center_vertical"
+                    android:layout_marginStart="48dp"
+                    android:textSize="16dp"
+                    android:textAppearance="?attr/colorOnSurfaceVariant"
+                    android:textStyle="bold" />
+
+                <!--        Jarum ka'bah        -->
+                <FrameLayout
+                    android:id="@+id/qiblaLayer"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:rotation="295">
+
+                    <View
+                        android:layout_width="5dp"
+                        android:layout_height="92dp"
+                        android:layout_gravity="top|center_horizontal"
+                        android:layout_marginTop="58dp"
+                        android:background="@drawable/bg_qibla_needle" />
+
+                    <ImageView
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:layout_gravity="top|center_horizontal"
+                        android:layout_marginTop="12dp"
+                        android:importantForAccessibility="no"
+                        android:src="@drawable/ic_kaaba" />
+                </FrameLayout>
+
+                <View
+                    android:layout_width="18dp"
+                    android:layout_height="18dp"
+                    android:layout_gravity="center"
+                    android:background="@drawable/bg_qibla_hub" />
+
+            </FrameLayout>
+
+            <!--     Arah HP: diam di atas, tidak ikut berputar       -->
+            <ImageView
+                android:layout_width="16dp"
+                android:layout_height="12dp"
+                android:layout_gravity="top|center_horizontal"
+                android:src="@drawable/ic_phone_pointer" />
+        </FrameLayout>
+
+        <TextView
+            android:id="@+id/tvQiblaInstruction"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="18dp"
+            android:accessibilityLiveRegion="polite"
+            tools:text="Putar HP 15° ke kanan" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:gravity="center"
+            android:text="@string/qibla_legend"
+            android:textAppearance="?attr/textAppearanceBodyMedium" />
+
+        <!-- Tampilkan kalau  melaporkan SENSOR_STATUS_UNRELIABLE / ACCURACY_LOW -->
+
+        <LinearLayout
+            android:id="@+id/layoutLowAccuracy"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="18dp"
+            android:background="@drawable/bg_warning"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:paddingHorizontal="14dp"
+            android:paddingVertical="12dp"
+            android:visibility="gone"
+            tools:visibility="visible" />
+
+        <ImageView
+            android:layout_width="22dp"
+            android:layout_height="22dp"
+            android:importantForAccessibility="no"
+            android:src="@drawable/ic_figure_eight"
+            app:tint="@color/amber_800" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="12dp"
+            android:layout_weight="1"
+            android:lineSpacingMultiplier="1.15"
+            android:text="@string/qibla_low_accuracy"
+            android:textColor="@color/amber_900"
+            android:textSize="13sp" />
+
+    </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

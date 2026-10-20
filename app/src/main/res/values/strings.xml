@@ -87,4 +87,6 @@
     <string name="notif_adhan_text">Saatnya shalat %1$s di %2$s</string>
     <string name="notif_reminder_title">%1$d menit lagi %2$s</string>
     <string name="action_stop_adhan">Hentikan adzan</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>
